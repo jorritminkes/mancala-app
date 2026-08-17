@@ -8,7 +8,7 @@
     <relativePath>../pom.xml</relativePath>
   </parent>
   
-  <artifactID>mancala-api</artifactId>
+  <artifactId>mancala-api</artifactId>
   <packaging>jar</packaging>
   
   
