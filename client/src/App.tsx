@@ -17,16 +17,16 @@ export function App() {
   let pageContent;
   
   if (currentPage === "start") {
-    pageContent = <StartScreen goToGame={openGame} />;
+    pageContent = <StartScreen gaNaarSpel={openGame} />;
   }
   
   if (currentPage === "game") {
-    pageContent = <GamePage goToStart={openStart} />;
+    pageContent = <GamePage gaNaarStart={openStart} />;
   }
 
   return (
     <div>
-      <NavBar goToStart={openStart} goToGame={openGame} />
+      <NavBar gaNaarStart={openStart} gaNaarSpel={openGame} />
 
       <main>
         {pageContent}

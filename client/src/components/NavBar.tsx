@@ -8,14 +8,14 @@ export function NavBar(props: any) {
       justifyContent: 'center'
     }}>
       <button 
-        onClick={props.goToStart}
+        onClick={props.gaNaarStart}
         style={{ padding: '8px 16px', cursor: 'pointer' }}
       >
         Home
       </button>
       
       <button 
-        onClick={props.goToGame}
+        onClick={props.gaNaarSpel}
         style={{ padding: '8px 16px', cursor: 'pointer' }}
       >
         Board

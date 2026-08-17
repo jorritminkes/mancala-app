@@ -1,11 +1,19 @@
+
+import { startNewGame } from "../api";
 export function StartScreen(props: any) {
+  
+  async function startNieuwSpel() {
+    await startNewGame();
+    props.gaNaarSpel();
+  }
+  
   return (
     <div style={{ textAlign: 'center', padding: '2rem', fontFamily: 'sans-serif' }}>
       <h1>Mancala</h1>
       <p>Welkom bij het spel! Klik op de knop om te beginnen.</p>
 
       <button 
-        onClick={props.goToGame}
+        onClick={startNieuwSpel}
         style={{ padding: '10px 20px', fontSize: '16px', cursor: 'pointer' }}
       >
         Start Nieuw Spel
