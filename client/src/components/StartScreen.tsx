@@ -1,11 +1,11 @@
 
-import { startNewGame } from "../api";
+// import { startNewGame } from "../api";
 export function StartScreen(props: any) {
   
-  async function startNieuwSpel() {
-    await startNewGame();
-    props.gaNaarSpel();
-  }
+  // async function startNieuwSpel() {
+  //   await startNewGame();
+  //   props.gaNaarSpel();
+  // }
   
   return (
     <div style={{ textAlign: 'center', padding: '2rem', fontFamily: 'sans-serif' }}>
@@ -13,7 +13,8 @@ export function StartScreen(props: any) {
       <p>Welkom bij het spel! Klik op de knop om te beginnen.</p>
 
       <button 
-        onClick={startNieuwSpel}
+        // onClick={startNieuwSpel}
+        onClick={props.gaNaarSpel}
         style={{ padding: '10px 20px', fontSize: '16px', cursor: 'pointer' }}
       >
         Start Nieuw Spel

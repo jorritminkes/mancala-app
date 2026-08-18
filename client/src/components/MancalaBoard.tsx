@@ -1,10 +1,11 @@
 export function MancalaBoard(props: any) {
   
-  const { bord, klikOpPocket } = props;
-  const stenen = bord.stenenPerVakje;
+  // const { bord, klikOpPocket } = props;
+  // const stenen = bord.stenenPerVakje;
+  const stenen = [4,4,4,4,4,4, 0, 4,4,4,4,4,4, 0]
 
-  // const vakjesSpeler1 = [4, 4, 4, 4, 4, 4, 0];
-  // const vakjesSpeler2 = [4, 4, 4, 4, 4, 4, 0];
+  const vakjesSpeler1 = [4, 4, 4, 4, 4, 4, 0];
+  const vakjesSpeler2 = [4, 4, 4, 4, 4, 4, 0];
 
   const outerPadding = 20;
   const gap = 20;
@@ -64,6 +65,24 @@ export function MancalaBoard(props: any) {
         </div>
         
         <div style={{ display: 'flex', flexDirection: 'column', gap: `${gap}px` }}>
+          <div style={{ display: 'flex', gap: `${gap}px` }}>
+            <div style={pocketStyle}>{vakjesSpeler2[5]}</div>
+            <div style={pocketStyle}>{vakjesSpeler2[4]}</div>
+            <div style={pocketStyle}>{vakjesSpeler2[3]}</div>
+            <div style={pocketStyle}>{vakjesSpeler2[2]}</div>
+            <div style={pocketStyle}>{vakjesSpeler2[1]}</div>
+            <div style={pocketStyle}>{vakjesSpeler2[0]}</div>
+          </div>
+          <div style={{ display: 'flex', gap: `${gap}px` }}>
+            <div style={pocketStyle}>{vakjesSpeler1[0]}</div>
+            <div style={pocketStyle}>{vakjesSpeler1[1]}</div>
+            <div style={pocketStyle}>{vakjesSpeler1[2]}</div>
+            <div style={pocketStyle}>{vakjesSpeler1[3]}</div>
+            <div style={pocketStyle}>{vakjesSpeler1[4]}</div>
+            <div style={pocketStyle}>{vakjesSpeler1[5]}</div>
+          </div>
+
+          
           {/* <div style={{ display: 'flex', gap: `${gap}px` }}>
             <div style={pocketStyle}onClick={() => klikOpPocket(13)}>{vakjesSpeler2[5]}</div>
             <div style={pocketStyle}onClick={() => klikOpPocket(12)}>{vakjesSpeler2[4]}</div>
@@ -80,7 +99,8 @@ export function MancalaBoard(props: any) {
             <div style={pocketStyle}onClick={() => klikOpPocket(4)}>{vakjesSpeler1[4]}</div>
             <div style={pocketStyle}onClick={() => klikOpPocket(5)}>{vakjesSpeler1[5]}</div>
           </div> */}
-          <div style={{ display: 'flex', gap: `${gap}px` }}>
+          
+          {/* <div style={{ display: 'flex', gap: `${gap}px` }}>
             <div style={pocketStyle}onClick={() => klikOpPocket(13)}>{stenen[12]}</div>
             <div style={pocketStyle}onClick={() => klikOpPocket(12)}>{stenen[11]}</div>
             <div style={pocketStyle}onClick={() => klikOpPocket(11)}>{stenen[10]}</div>
@@ -95,7 +115,7 @@ export function MancalaBoard(props: any) {
             <div style={pocketStyle}onClick={() => klikOpPocket(3)}>{stenen[3]}</div>
             <div style={pocketStyle}onClick={() => klikOpPocket(4)}>{stenen[4]}</div>
             <div style={pocketStyle}onClick={() => klikOpPocket(5)}>{stenen[5]}</div>
-          </div>
+          </div> */}
         </div>
         
         <div style={mancalaStyle}>
